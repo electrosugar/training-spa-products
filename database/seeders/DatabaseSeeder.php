@@ -1,0 +1,28 @@
+<?php
+
+namespace Database\Seeders;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\ArchivedProduct;
+use App\Models\Customer;
+use App\Models\Order;
+use App\Models\OrderProduct;
+use App\Models\Product;
+use App\Models\User;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        User::factory(1)->create();
+        Product::factory(10)->create();
+        Order::factory(10)->create();
+        OrderProduct::factory(20)->create();
+    }
+}
